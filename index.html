@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff6f61, #ffdb58);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff; /* White */
+            text-transform: capitalize;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin-top: 3%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(208, 16, 16, 0.947);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #ff6f61, #ffdb58);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #ff0000, #ff7f00);
+        }
+
+        h2 {
+            color: #ff6f61;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="chest_pain">Chest Pain Experienced by Patient (mg/dL):</label>
+        <input type="number" id="chest_pain" name="chest_pain" required><br><br>
+
+        <label for="cholesterol">Patient's Cholesterol level  (mg/dL):</label>
+        <input type="number" id="cholesterol" name="cholesterol" required><br><br>
+
+        <label for="thalach">Maximum Heart Rate :</label>
+        <input type="number" id="thalach" name="thalach" required><br><br>
+
+        <label for="thalassemia">Blood Disorder:</label>
+        <input type="number" id="thalassemia" name="thalassemia" required><br><br>
+
+        <label for="ca">Number of Major vessels:</label>
+        <input type="number" id="ca" name="ca" required><br><br>
+
+        <label for="Slope">Slope of the Peak Exercise ST Segment:</label>
+        <input type="number" id="slope" name="slope" required><br><br>
+
+        <input type="submit" value="Predict">
+        <h2>{{ fin_result }}</h2> 
+    </form>
+ 
+</body>
+
+
+</html>
