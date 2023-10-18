@@ -1,0 +1,2 @@
+# Heart-Disease-Prediction-By-Rest-API
+Developed a web application using Python and the Flask framework for predicting heart disease. Integrated a machine learning model trained for heart disease prediction. Utilized HTML/CSS for the user interface to collect medical data, processed the inputs in Python, and displayed the prediction results dynamically. Demonstrated proficiency in model deployment and web development.
